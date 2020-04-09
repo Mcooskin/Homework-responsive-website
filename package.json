@@ -1,0 +1,25 @@
+{
+  "name": "homework-responsive-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mcooskin/Homework-responsive-website.git"
+  },
+  "author": "Indre Makauskaite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mcooskin/Homework-responsive-website/issues"
+  },
+  "homepage": "https://github.com/Mcooskin/Homework-responsive-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
