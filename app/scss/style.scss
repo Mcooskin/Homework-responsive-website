@@ -7,7 +7,7 @@ $brand-color: #0C78FB;
 html {
     font-size: 16px;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     html {
         font-size: 14px;
     }
@@ -15,19 +15,26 @@ html {
 body {
     font-family: 'Lato', sans-serif;
 }
-.header-top, .footer-bottom {
+main {
+    margin-top: 2.5rem;
+}
+header, footer {
     display: flex;
     justify-content: space-between;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
-.header-top {
+header {
     padding-top: 0.313rem;
     padding-bottom: 0.313rem;
-
-    p {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+header p {
     font-size: 1.2rem;
-    padding: 0.313rem;}
+    padding: 0.313rem;
 }
 button {
     background-color: $brand-color;
@@ -41,10 +48,12 @@ button {
 }
 form button {
     width: 7.5rem;
+    margin-left: 0.5rem;
 }
 @media (max-width: 800px) {
     form button {
         width: 90vw;
+        margin: 1rem;
     }
 }
 input {
@@ -55,15 +64,14 @@ input {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     padding-left: 0.625rem;
-    margin-right: 0.625rem;
-    margin-bottom: 0.625rem;
 }
 @media (max-width: 800px) {
     input {
         width: 90vw;
+        margin: 1rem;
     }
 }
-.main-header, .main-footer {
+.intro, .newsletter {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +86,7 @@ input {
     padding-left: 5rem;
     padding-right: 5rem;
 }
-.main-footer {
+.newsletter {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -95,18 +103,18 @@ h2 {
 p {
     color: gray;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     h1, h2 {
         width: 80vw;
     }
 }
-.footer-bottom {
+footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
     align-items: center;
 }
 @media (max-width: 800px) {
-    .footer-bottom {
+    footer {
         flex-direction: column;
         justify-content: center;
     }
@@ -116,7 +124,7 @@ p {
         align-items: center;
     }
 }
-.footer-bottom p {
+footer p {
     font-size: 0.75rem;
     color: gray;
 }
@@ -130,6 +138,9 @@ li {
     margin-bottom: 0.625rem;
     margin-right: 1.25rem;
     position: relative;
+}
+li:last-child {
+    margin-right: 0;
 }
 li:not(:last-child):after {
     content: "";
@@ -149,7 +160,11 @@ a {
 .fab {
     color:  $brand-color;
     font-size: 2.5rem;
-    margin: 0.7rem;
+    margin: 1rem;
+    margin-right: 0;
+}
+.fab:first-child {
+    margin-left: 0;
 }
 @media (max-width: 800px) {
     .fab {
@@ -253,33 +268,34 @@ h3 {
     display: flex;
     flex-direction: column;
 }
-.mid-section img {
+article img {
     width: 50vw;
-    height: 30rem;
+    height: auto;
+    object-fit: cover;
 }
 @media (max-width: 800px) {
-    .mid-section img {
+    article img {
         width: 100vw;
     }
 }
-.mid-section .block {
+.mid-section article {
     display: flex;
 }
 @media (max-width: 800px) {
-    .mid-section .block {
+    .mid-section article {
         flex-direction: column;
     }
 }
-.mid-section .block:nth-child(even) {
+.mid-section article:nth-child(even) {
     flex-direction: row-reverse;
 }
 @media (max-width: 800px) {
-    .mid-section .block:nth-child(even) {
+    .mid-section article:nth-child(even) {
         flex-direction: column;
     }
 }
-article {
-    padding: 5rem;
+.text-box {
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
